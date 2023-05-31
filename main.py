@@ -8,7 +8,7 @@ photos = 'Img/taladro.png'
 
 
 
-
+#inicio
 
 @bot.message_handler(commands=['start','help', 'ayuda'])
 def enviar(message):
