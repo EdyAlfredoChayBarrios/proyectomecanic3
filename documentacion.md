@@ -11,4 +11,4 @@
 <p>El proyecto se efectuo en la mensajeria telegram y juntamente con el lenguaje de programacion python por ende se realiza la gestion con con cualquier usuario y se debe solicitar una conversation con el usuario BotFather que nos brinde un chatbot por cual el no pedira cierta informacion para poder realizar el bot como lo muestra la siguiente imagen.</p>
 <br>
 
-![screen logo](ImgCaptura/uno.png)<br>
+![screen logo](https://github.com/EdyAlfredoChayBarrios/proyectomecanic3/tree/master/ImgCaptura/uno.png)<br>
