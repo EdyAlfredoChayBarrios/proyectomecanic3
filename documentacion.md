@@ -19,4 +19,8 @@
 ![screen logo](https://github.com/EdyAlfredoChayBarrios/proyectomecanic3/blob/master/ImgCaptura/dos.PNG)<br>
 
 <p>
+El proyecto '
+</p>
+
+<p>
 </p>

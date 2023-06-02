@@ -18,7 +18,21 @@ def insertar(nombre,idChat):
     db.commit()
     db.close()
 
-#
+
+def consuiltaProducto(nombreproducto):
+    db, cursor = conexion()
+    cursor.execute(f"""select * from producto where relacion ='{nombreproducto}';""")
+    resultados = cursor.fetchall()
+    cursor.close()
+    db.close()
+    return resultados
+
 # if __name__ == '__main__':
-#     print("se inicio")
-#     insertar()
+#     resultados=consuiltaProducrto('power_drill')
+#
+#     for fila in resultados:
+#         # Acceder a los valores de cada columna
+#         print( fila[0])
+#         print( fila[1])
+    # print("se inicio")
+    # insertar()
