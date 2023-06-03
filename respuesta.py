@@ -25,7 +25,7 @@ x = preprocess_input(x)
 preds = model.predict(x)
 # decode the results into a list of tuples (class, description, probability)
 # (one such list for each sample in the batch)
-print('Predicted:', decode_predictions(preds, top=3)[0])
+#print('Predicted:', decode_predictions(preds, top=3)[0])
 imagenes=decode_predictions(preds, top=1)[0]
 print(imagenes[0][1])
 

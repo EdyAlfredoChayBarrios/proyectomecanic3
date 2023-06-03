@@ -27,12 +27,23 @@ def consuiltaProducto(nombreproducto):
     db.close()
     return resultados
 
+
+def consultaNombre(idChat):
+    db, cursor = conexion()
+    cursor.execute(f"""SELECT mecanic3.existencia({idChat});""")
+    resultados = cursor.fetchall()
+    cursor.close()
+    db.close()
+    return resultados
+
+
+
 # if __name__ == '__main__':
-#     resultados=consuiltaProducrto('power_drill')
+#     resultados=consultaNombre(60949368874)
 #
 #     for fila in resultados:
 #         # Acceder a los valores de cada columna
 #         print( fila[0])
-#         print( fila[1])
+        #print( fila[1])
     # print("se inicio")
     # insertar()

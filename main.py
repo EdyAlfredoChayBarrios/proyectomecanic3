@@ -8,8 +8,6 @@ bot = telebot.TeleBot("6256558501:AAF4Or88X9LSmobO9FNsZTggfogD03fDf_A")
 usuarios = {}
 
 
-
-
 # inicio
 
 @bot.message_handler(commands=['start', 'help', 'ayuda'])
@@ -19,9 +17,18 @@ def enviar(message):
 
 @bot.message_handler(commands=['alta'])
 def alta(message):
-    markup = ForceReply()
-    msg = bot.send_message(message.chat.id, "Hola como te llamas", reply_markup=markup)
-    bot.register_next_step_handler(msg, insertarDatos)
+
+    respuesta=database.consultaNombre(message.chat.id)
+
+    if respuesta[0][0] == "0":
+        markup = ForceReply()
+        msg = bot.send_message(message.chat.id, "Hola como te llamas", reply_markup=markup)
+        bot.register_next_step_handler(msg, insertarDatos)
+    else:
+        bot.send_message(message.chat.id, f"""Holaaaa  {respuesta[0][0]} como te puedo ayudar """)
+        volverAValidar(message)
+
+
 
 
 def insertarDatos(message):
